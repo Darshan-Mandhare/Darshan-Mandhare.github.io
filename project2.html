@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LWC Account Manager – Project Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #a855f7, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-border {
+            position: relative;
+        }
+
+        .accent-border::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 3px;
+            background: #a855f7;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#030712] text-gray-300 selection:bg-indigo-500/30">
+
+    <!-- Background Glow -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/2 -right-24 w-80 h-80 bg-indigo-600/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <main class="relative max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Back -->
+        <a href="Salesforce.html"
+           class="group inline-flex items-center text-sm font-medium text-indigo-400 hover:text-indigo-300 transition mb-10">
+            <svg class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <!-- HEADER -->
+        <header class="mb-16">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-indigo-400 uppercase bg-indigo-400/10 border border-indigo-400/20 rounded-md">
+                    Salesforce LWC
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-700"></span>
+                <span class="text-gray-500 text-xs font-medium uppercase tracking-wider">
+                    Account & Contact Management
+                </span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-[1.1]">
+                LWC Account <br>
+                <span class="text-gradient">Manager Application</span>
+            </h1>
+
+            <p class="text-lg text-gray-400 max-w-3xl leading-relaxed">
+                A modern Lightning Web Components–based Salesforce application designed
+                to manage Accounts and Contacts with full CRUD capabilities and seamless
+                REST API integration with external systems.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <!-- MAIN CONTENT -->
+            <div class="lg:col-span-8 space-y-12">
+
+                <!-- Overview -->
+                <section class="accent-border pl-8">
+                    <h2 class="text-xl font-bold text-white mb-4 italic tracking-wide">
+                        Project Overview
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed text-base">
+                        The LWC Account Manager is a custom Salesforce solution built to
+                        simplify Account and Contact management using Lightning Web Components.
+                        The application provides an intuitive UI for CRUD operations while
+                        securely integrating with external systems using REST APIs.
+                    </p>
+                </section>
+
+                <!-- Problem / Solution -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="glass-panel p-6 rounded-2xl border-l-2 border-l-rose-500/40">
+                        <h3 class="text-white font-bold mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                            Business Problem
+                        </h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Users relied on standard Salesforce pages that lacked flexibility
+                            and a unified experience for managing Accounts and Contacts.
+                            Additionally, there was no structured integration with external systems.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl border-l-2 border-l-emerald-500/40">
+                        <h3 class="text-white font-bold mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Solution Delivered
+                        </h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• Built reusable Lightning Web Components</li>
+                            <li>• Implemented CRUD for Accounts & Contacts</li>
+                            <li>• Integrated external systems via REST API</li>
+                            <li>• Ensured secure, Apex-driven backend logic</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Technical -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-6">
+                        Technical Implementation
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <div class="glass-panel p-6 rounded-2xl">
+                            <h3 class="text-indigo-400 font-semibold mb-4 uppercase text-xs tracking-widest">
+                                Salesforce Development
+                            </h3>
+                            <ul class="space-y-3 text-sm">
+                                <li>• Lightning Web Components (LWC)</li>
+                                <li>• Apex Controllers</li>
+                                <li>• SOQL Queries</li>
+                                <li>• LDS & Imperative Apex Calls</li>
+                                <li>• Validation & Error Handling</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-2xl">
+                            <h3 class="text-purple-400 font-semibold mb-4 uppercase text-xs tracking-widest">
+                                Integration & Tools
+                            </h3>
+                            <ul class="space-y-3 text-sm">
+                                <li>• REST API Integration</li>
+                                <li>• JSON Request/Response Handling</li>
+                                <li>• Named Credentials</li>
+                                <li>• Secure API Authentication</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Impact -->
+                <section class="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20 p-8 rounded-3xl">
+                    <h2 class="text-xl font-bold text-white mb-6">
+                        Business Impact
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <p>✔ Improved user productivity</p>
+                        <p>✔ Faster Account & Contact management</p>
+                        <p>✔ Reduced dependency on standard UI</p>
+                        <p>✔ Reliable external system sync</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="lg:col-span-4 space-y-8">
+
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-white font-bold mb-4">My Role</h3>
+                    <p class="text-indigo-400 font-semibold mb-3">Salesforce Developer</p>
+                    <ul class="text-xs text-gray-500 space-y-2">
+                        <li>• LWC design & development</li>
+                        <li>• Apex backend logic</li>
+                        <li>• REST API integration</li>
+                        <li>• Testing & debugging</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-white font-bold mb-4">Key Features</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>• Dynamic Account & Contact UI</li>
+                        <li>• Reusable LWC components</li>
+                        <li>• Secure API integration</li>
+                        <li>• Clean, responsive design</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl bg-white/[0.02]">
+                    <h3 class="text-white font-bold mb-4">Objects Used</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-800 rounded text-[10px] border border-gray-700">Account</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-[10px] border border-gray-700">Contact</span>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <!-- FOOTER CTA -->
+        <footer class="mt-24 pt-10 border-t border-gray-800 text-center">
+            <p class="text-gray-500 text-sm mb-6">
+                Want to explore this Project?
+            </p>
+            <a href="mailto:darsh.mandhare1@gmail.com"
+               class="inline-flex items-center px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-indigo-400 transition transform hover:scale-105">
+                Let's Discuss This Project
+            </a>
+        </footer>
+
+    </main>
+
+</body>
+<footer class="py-12 border-t border-white/5 text-center text-slate-600">
+    <p class="text-xs uppercase tracking-[0.4em] font-bold">
+      &copy; 2026 Bhaiyyasaheb Mandhare • Personal Portfolio
+    </p>
+  </footer>
+</html>

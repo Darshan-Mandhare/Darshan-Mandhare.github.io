@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhaiyyasaheb Mandhare | Salesforce Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card-bg: rgba(15, 23, 42, 0.6);
+      --accent: #38bdf8;
+      --accent-secondary: #6366f1;
+      --text-main: #f8fafc;
+      --text-dim: #94a3b8;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    /* Modern Gradient Mesh Background */
+    .mesh-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(circle at 0% 0%,
+          rgba(56, 189, 248, 0.08) 0%,
+          transparent 50%),
+        radial-gradient(circle at 100% 100%,
+          rgba(99, 102, 241, 0.08) 0%,
+          transparent 50%);
+    }
+
+    .glass-panel {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .glass-panel:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .skill-badge {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.5rem 0.8rem;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s;
+    }
+
+    .skill-badge:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: var(--accent);
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-link {
+      position: relative;
+      font-weight: 500;
+      color: var(--text-dim);
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="scroll-smooth">
+  <div class="mesh-bg"></div>
+
+  <nav class="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-lg border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <div class="text-xl font-extrabold tracking-tighter">
+        <span class="text-white">BM</span><span class="text-sky-500">.SFDC</span>
+      </div>
+      <div class="hidden md:flex space-x-10">
+        <a href="#about" class="nav-link text-sm uppercase tracking-widest">About</a>
+        <a href="#skills" class="nav-link text-sm uppercase tracking-widest">Toolkit</a>
+        <a href="#projects" class="nav-link text-sm uppercase tracking-widest">Work</a>
+        <a href="#contact" class="nav-link text-sm uppercase tracking-widest">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 pt-32">
+    <section id="hero" class="mb-24 animate-on-scroll">
+      <div class="glass-panel rounded-[2.5rem] overflow-hidden flex flex-col border border-white/10 shadow-2xl">
+
+        <div class="h-[240px] relative overflow-hidden">
+          <img src="./images/Darshan.png" alt="Profile Banner" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div class="h-[560px] px-8 md:px-16 pb-12 bg-[#0f172a]/80 relative flex flex-col justify-center">
+
+          <div class="flex flex-col md:flex-row items-end gap-8 -mt-28 mb-12 relative z-20">
+            <div class="relative group">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000">
+              </div>
+              <img src="./images/Portfolio.png" onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=BM'"
+                class="relative w-48 h-48 rounded-full border-4 border-[#020617] object-cover shadow-2xl" />
+            </div>
+            <div class="flex-grow pb-2">
+              <h1 class="text-5xl font-extrabold text-white tracking-tight mb-1">
+                Bhaiyyasaheb Mandhare
+              </h1>
+              <p class="text-xl font-medium text-sky-400 flex items-center gap-2">
+                <i class="fa-brands fa-salesforce text-2xl"></i>
+                Salesforce Developer
+              </p>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-16">
+            <div class="lg:col-span-2">
+              <p class="text-slate-400 text-xl leading-relaxed mb-10 font-light">
+                Salesforce Developer with 1+ Years of experience building
+                scalable, customized CRM solutions. Skilled in Apex, Lightning
+                Web Components, SOQL/SOSL, Salesforce Flows, and REST API
+                Integrations. Passionate about engineering modern, efficient,
+                and business-driven Salesforce applications. Specialized in
+                <span class="text-white font-medium italic underline decoration-sky-500/50">LWC, Apex, and Cloud
+                  Architecture</span>
+                with a focus on high-performance business automation.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <span
+                  class="px-5 py-2.5 bg-sky-500/10 text-sky-400 text-xs font-bold rounded-xl border border-sky-500/20 uppercase tracking-widest">
+                  2x SALESFORCE CERTIFIED
+                </span>
+                <span
+                  class="px-5 py-2.5 bg-indigo-500/10 text-indigo-400 text-xs font-bold rounded-xl border border-indigo-500/20 uppercase tracking-widest">
+                  1x COPADO CERTIFIED
+                </span>
+                <span
+                  class="px-5 py-2.5 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-xl border border-emerald-500/20 uppercase tracking-widest">
+                  TRAILHEAD ⭐⭐ RANGER
+                </span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-6 justify-end">
+              <a href="#"
+                class="w-full py-5 bg-white text-black text-center font-bold rounded-[1.25rem] hover:bg-sky-400 hover:text-white transition-all shadow-xl">
+                Download CV
+              </a>
+              <div class="flex justify-between px-4 pt-6 border-t border-white/10">
+                <a href="https://github.com/Darshan-Mandhare"
+                  class="text-slate-500 hover:text-sky-400 transition transform hover:scale-110"><i
+                    class="fa-brands fa-github text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/darshan-mandhare-abb79420a"
+                  class="text-slate-500 hover:text-sky-400 transition transform hover:scale-110"><i
+                    class="fa-brands fa-linkedin text-2xl"></i></a>
+                <a href="https://www.salesforce.com/trailblazer/darshan-mandhare-96"
+                  class="text-slate-500 hover:text-sky-400 transition transform hover:scale-110"><i
+                    class="fa-brands fa-salesforce text-2xl"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 animate-on-scroll">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <h2 class="text-xs uppercase tracking-[0.3em] text-sky-500 font-bold">
+            Background
+          </h2>
+          <h2 class="text-3xl font-bold mb-10 text-white flex items-center">
+            <span class="w-1.5 h-8 bg-cyan-400 mr-4 rounded-full"></span>
+            The Platform Engineer
+          </h2>
+          <p class="text-slate-400 text-lg leading-relaxed">
+            I am a dedicated Salesforce Developer with hands-on experience in
+            Apex, Lightning Web Components (LWC), SOQL/SOSL, API Integrations
+            and automation tools like Flows and Process Builder. Skilled in
+            designing robust Salesforce applications and optimizing platform
+            features to improve business processes.
+            <br /><br />
+            I am working at Avion Technology where I contributed to CRM
+            development, real estate application customization, and modern
+            Lightning UI enhancements. I enjoy solving complex business
+            requirements and building scalable solutions with clean, reusable
+            code.
+          </p>
+          <div class="grid grid-cols-2 gap-6 pt-4">
+            <div class="p-6 glass-panel rounded-2xl border-l-4 border-sky-500">
+              <div class="text-3xl font-bold text-white mb-1">1+</div>
+              <div class="text-xs text-slate-500 uppercase tracking-widest">
+                Years Experience
+              </div>
+            </div>
+            <div class="p-6 glass-panel rounded-2xl border-l-4 border-indigo-500">
+              <div class="text-3xl font-bold text-white mb-1">5+</div>
+              <div class="text-xs text-slate-500 uppercase tracking-widest">
+                Projects Delivered
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-panel p-8 rounded-[2.5rem] space-y-4">
+          <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-slate-300">Salesforce Admin</span>
+            <i class="fa-solid fa-check-circle text-sky-400"></i>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-slate-300">Apex & Triggers</span>
+            <i class="fa-solid fa-code text-sky-400"></i>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-slate-300">Salesforce Development</span>
+            <i class="fa-brands fa-js-square text-sky-400"></i>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-slate-300">LWC Development</span>
+            <i class="fa-brands fa-js-square text-sky-400"></i>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-slate-300">ANT TOOL & COPADO</span>
+            <i class="fa-brands fa-js-square text-sky-400"></i>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white/5 rounded-xl border border-white/5">
+            <span class="text-slate-300">Agentforce & AI</span>
+            <i class="fa-solid fa-robot text-sky-400"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-16 animate-on-scroll">
+      <h2 class="text-3xl font-bold mb-10 text-white flex items-center">
+        <span class="w-1.5 h-8 bg-cyan-400 mr-4 rounded-full"></span>
+        Technical Skillset
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-panel p-8 rounded-[2rem] border-t-2 border-sky-500/50">
+          <h4 class="text-lg font-bold text-white mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-cloud text-sky-500"></i> Salesforce Core
+          </h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge"><i class="fa-solid fa-code mr-2 text-indigo-400"></i> Apex &
+              Triggers</span>
+            <span class="skill-badge"><i class="fa-brands fa-js-square mr-2 text-yellow-400"></i>
+              LWC</span>
+            <span class="skill-badge"><i class="fa-solid fa-database mr-2 text-teal-400"></i> SOQL /
+              SOSL</span>
+            <span class="skill-badge"><i class="fa-solid fa-bolt mr-2 text-orange-400"></i>
+              Flows</span>
+            <span class="skill-badge"><i class="fa-solid fa-plug mr-2 text-purple-400"></i> REST /
+              SOAP</span>
+            <span class="skill-badge"><i class="fa-solid fa-database mr-2 text-green-400"></i> Data
+              Loader</span>
+            <span class="skill-badge"><i class="fa-solid fa-check-circle mr-2 text-pink-400"></i>
+              Validation Rules</span>
+            <span class="skill-badge"><i class="fa-solid fa-bug mr-2 text-red-400"></i> Apex
+              Testing</span>
+            <span class="skill-badge"><i class="fa-solid fa-chart-line mr-2 text-blue-300"></i>
+              Reports</span>
+            <span class="skill-badge"><i class="fa-solid fa-robot mr-2 text-cyan-300"></i>
+              Agentforce</span>
+          </div>
+        </div>
+        <div class="glass-panel p-8 rounded-[2rem] border-t-2 border-indigo-500/50">
+          <h4 class="text-lg font-bold text-white mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-screwdriver-wrench text-indigo-500"></i>
+            DevOps
+          </h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge"><i class="fa-solid fa-plug mr-2 text-red-400"></i> REST
+              API</span>
+            <span class="skill-badge"><i class="fa-solid fa-plug mr-2 text-red-400"></i> SOAP
+              API</span>
+            <span class="skill-badge"><i class="fa-brands fa-git-alt mr-2 text-orange-600"></i> Git
+              Control</span>
+            <span class="skill-badge"><i class="fa-solid fa-terminal mr-2 text-purple-400"></i> SFDX
+              / CLI</span>
+            <span class="skill-badge"><i class="fa-solid fa-rocket mr-2 text-gray-400"></i> ANT
+              Tool</span>
+            <span class="skill-badge"><i class="fa-solid fa-diagram-project mr-2 text-cyan-400"></i>
+              Copado DevOps</span>
+          </div>
+        </div>
+        <div class="glass-panel p-8 rounded-[2rem] border-t-2 border-emerald-500/50">
+          <h4 class="text-lg font-bold text-white mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-brain text-emerald-500"></i> AI & Concepts
+          </h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge"><i class="fa-solid fa-bullseye mr-2 text-fuchsia-400"></i>
+              Trigger Frameworks</span>
+            <span class="skill-badge"><i class="fa-solid fa-shield-alt mr-2 text-sky-400"></i>
+              Security Model</span>
+            <span class="skill-badge"><i class="fa-solid fa-vial mr-2 text-rose-400"></i> Unit
+              Testing</span>
+            <span class="skill-badge"><i class="fa-solid fa-cubes mr-2 text-indigo-300"></i> Object
+              Modeling</span>
+            <span class="skill-badge"><i class="fa-solid fa-project-diagram mr-2 text-green-400"></i>
+              CI/CD Pipeline</span>
+            <span class="skill-badge"><i class="fa-solid fa-sync-alt mr-2 text-yellow-400"></i>
+              Release Management</span>
+            <span class="skill-badge"><i class="fa-solid fa-users mr-2 text-blue-400"></i> Agent
+              Management</span>
+            <span class="skill-badge"><i class="fa-solid fa-layer-group mr-2 text-cyan-400"></i>
+              Automation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-12 animate-on-scroll">
+      <h2 class="text-3xl font-bold mb-10 text-white flex items-center">
+        <span class="w-1.5 h-8 bg-cyan-400 mr-4 rounded-full"></span>
+        Featured Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel rounded-3xl overflow-hidden group hover:border-cyan-400/50 transition-all duration-500">
+          <div class="h-1.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition">
+              Real Estate CRM
+            </h3>
+            <p class="text-gray-400 text-sm mb-6 h-20 leading-relaxed">
+              Developed a customized CRM to manage properties, agents, and
+              client interactions using complex Apex triggers and LWC
+              interfaces.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Apex</span>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">LWC</span>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Flows</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">SOQL</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">REST API</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Salesforce Admin</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Salesforce Developer</span>
+            </div>
+            <a href="./project1.html" class="text-sm font-bold text-cyan-400 flex items-center gap-2 hover:underline">View Details <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div
+          class="glass-panel rounded-3xl overflow-hidden group hover:border-purple-400/50 transition-all duration-500">
+          <div class="h-1.5 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition">
+              LWC Account Manager
+            </h3>
+            <p class="text-gray-400 text-sm mb-6 h-20 leading-relaxed">
+              Custom Lightning Web Components for CRUD operations on
+              Accounts/Contacts. Features external system integration via
+              REST.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Apex</span>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">LWC</span>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Flows</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">SOQL</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">REST API</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Salesforce Admin</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Salesforce Developer</span>
+            </div>
+            <a href="./project2.html" class="text-sm font-bold text-purple-400 flex items-center gap-2 hover:underline">View Details
+              <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div
+          class="glass-panel rounded-3xl overflow-hidden group hover:border-green-400/50 transition-all duration-500">
+          <div class="h-1.5 bg-gradient-to-r from-green-500 to-teal-500"></div>
+          <div class="p-8">
+            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition">
+              Healthcare CRM
+            </h3>
+            <p class="text-gray-400 text-sm mb-6 h-20 leading-relaxed">
+              Health Cloud–Inspired Patient Care Management System is a Salesforce-based healthcare solution CRM.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Apex</span>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">LWC</span>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Flows</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">SOQL</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">REST API</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Salesforce Admin</span>
+                <span
+                class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-white/5 border border-white/10 rounded">Salesforce Developer</span>
+            </div>
+            <a href="./project3.html" class="text-sm font-bold text-green-400 flex items-center gap-2 hover:underline">View Details <i
+                class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24 animate-on-scroll">
+      <div class="glass-panel rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 blur-[100px] -z-10"></div>
+        <h2 class="text-5xl font-extrabold text-white mb-8 tracking-tighter">
+          Ready to collaborate?
+        </h2>
+        <p class="text-slate-400 text-xl mb-12 max-w-2xl mx-auto font-light">
+          I'm currently open to new Salesforce development opportunities.
+          Let's discuss how I can help your team build powerful cloud
+          solutions.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+          <a href="mailto:darsh.mandhare1@gmail.com"
+            class="px-12 py-5 bg-sky-500 text-white font-bold rounded-2xl hover:bg-sky-400 transition-all transform hover:scale-105 shadow-xl shadow-sky-500/20">
+            Send an Email
+          </a>
+          <a href="https://www.linkedin.com/in/darshan-mandhare-abb79420a"
+            class="px-12 py-5 glass-panel text-white font-bold rounded-2xl hover:bg-white/5 transition-all">
+            LinkedIn DM
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 border-t border-white/5 text-center text-slate-600">
+    <p class="text-xs uppercase tracking-[0.4em] font-bold">
+      &copy; 2026 Bhaiyyasaheb Mandhare • Personal Portfolio
+    </p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document
+      .querySelectorAll(".animate-on-scroll")
+      .forEach((el) => observer.observe(el));
+  </script>
+</body>
+
+</html>

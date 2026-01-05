@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Cloud Demo – Salesforce Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #22d3ee, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .accent-border {
+            position: relative;
+        }
+        .accent-border::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 3px;
+            background: #22d3ee;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#030712] text-gray-300 selection:bg-cyan-500/30">
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/2 -right-24 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <main class="relative max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Back Link -->
+        <a href="Salesforce.html" class="group inline-flex items-center text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors mb-10">
+            <svg class="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Portfolio
+        </a>
+
+        <!-- Header -->
+        <header class="mb-16">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-cyan-400 uppercase bg-cyan-400/10 border border-cyan-400/20 rounded-md">
+                    Salesforce Health Cloud
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-700"></span>
+                <span class="text-gray-500 text-xs font-medium uppercase tracking-wider">
+                    Healthcare Data & Care Management
+                </span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-[1.1]">
+                Health Cloud–Inspired <br>
+                <span class="text-gradient">Patient Care Management System</span>
+            </h1>
+
+            <p class="text-lg text-gray-400 max-w-3xl leading-relaxed">
+                A Salesforce-based healthcare data model and automation framework inspired by Health Cloud,
+                designed to manage patients, providers, care plans, appointments, medications, and clinical data
+                with secure access, automation, and analytics.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <!-- MAIN CONTENT -->
+            <div class="lg:col-span-8 space-y-12">
+
+                <!-- Overview -->
+                <section class="accent-border pl-8">
+                    <h2 class="text-xl font-bold text-white mb-4 italic tracking-wide">
+                        Project Overview
+                    </h2>
+                    <p class="text-gray-400 leading-relaxed text-base">
+                        This project replicates core Health Cloud concepts using custom Salesforce objects,
+                        relationships, flows, dashboards, and an Experience Cloud portal. It demonstrates how
+                        patient-centric healthcare data can be modeled, automated, and visualized without
+                        native Health Cloud licenses.
+                    </p>
+                </section>
+
+                <!-- Problem / Solution -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-panel p-6 rounded-2xl border-l-2 border-l-red-500/40">
+                        <h3 class="text-white font-bold mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                            Business Problem
+                        </h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            Healthcare organizations often struggle with fragmented patient data, lack of
+                            care coordination, limited visibility into clinical metrics, and manual follow-ups.
+                            A scalable, secure, and automated system was required to manage end-to-end patient care.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl border-l-2 border-l-emerald-500/40">
+                        <h3 class="text-white font-bold mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Solution Delivered
+                        </h3>
+                        <ul class="text-sm text-gray-400 space-y-2">
+                            <li>• Patient-centric data model inspired by Health Cloud</li>
+                            <li>• Automated care plans, reminders, and alerts</li>
+                            <li>• Role-based access for providers and coordinators</li>
+                            <li>• Dashboards for clinical and operational insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Technical Implementation -->
+                <section>
+                    <h2 class="text-2xl font-bold text-white mb-6">
+                        Technical Implementation
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass-panel p-6 rounded-2xl">
+                            <h3 class="text-cyan-400 font-semibold mb-4 uppercase text-xs tracking-widest">
+                                Data Model
+                            </h3>
+                            <ul class="space-y-3 text-sm">
+                                <li>• Patient, Provider, Appointment, Care Plan objects</li>
+                                <li>• Many-to-many Care Team relationship</li>
+                                <li>• Clinical data & medication tracking</li>
+                                <li>• Referral and provider routing</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-2xl">
+                            <h3 class="text-blue-400 font-semibold mb-4 uppercase text-xs tracking-widest">
+                                Automation & Logic
+                            </h3>
+                            <ul class="space-y-3 text-sm">
+                                <li>• Record-triggered flows for care plans</li>
+                                <li>• Scheduled appointment reminders</li>
+                                <li>• Vitals-based alert automation</li>
+                                <li>• Intelligent referral routing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Business Impact -->
+                <section class="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 p-8 rounded-3xl">
+                    <h2 class="text-xl font-bold text-white mb-6">
+                        Business Impact
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                        <p>✔ Improved care coordination & visibility</p>
+                        <p>✔ Reduced manual follow-ups via automation</p>
+                        <p>✔ Proactive patient risk identification</p>
+                        <p>✔ Secure, role-based healthcare data access</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="lg:col-span-4 space-y-8">
+
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-white font-bold mb-4">My Role</h3>
+                    <p class="text-cyan-400 font-semibold mb-3">
+                        Salesforce Developer & Architect
+                    </p>
+                    <ul class="text-xs text-gray-500 space-y-2">
+                        <li>• Healthcare data modeling</li>
+                        <li>• Flow & automation design</li>
+                        <li>• Experience Cloud setup</li>
+                        <li>• Dashboard & analytics</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-white font-bold mb-4">Core Objects</h3>
+                    <div class="flex flex-wrap gap-2 text-[10px]">
+                        <span class="px-2 py-1 bg-gray-800 rounded">Patient__c</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded">Provider__c</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded">Appointment__c</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded">Care_Plan__c</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded">Medication__c</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded">Clinical_Data__c</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded">Referral__c</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl">
+                    <h3 class="text-white font-bold mb-4">Experience Cloud</h3>
+                    <p class="text-sm text-gray-400">
+                        Patient portal for viewing appointments, care plans, medications,
+                        submitting requests, and receiving automated reminders.
+                    </p>
+                </div>
+
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-10 border-t border-gray-800 text-center">
+            <p class="text-gray-500 text-sm mb-6">
+                This project demonstrates Health Cloud concepts without native licenses.
+            </p>
+            <a href="mailto:darsh.mandhare1@gmail.com"
+               class="inline-flex items-center px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-cyan-400 transition-all">
+                Discuss This Healthcare Solution
+            </a>
+        </footer>
+
+    </main>
+
+</body>
+<footer class="py-12 border-t border-white/5 text-center text-slate-600">
+    <p class="text-xs uppercase tracking-[0.4em] font-bold">
+      &copy; 2026 Bhaiyyasaheb Mandhare • Personal Portfolio
+    </p>
+  </footer>
+</html>
